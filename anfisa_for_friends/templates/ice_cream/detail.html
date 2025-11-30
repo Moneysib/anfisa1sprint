@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% block title %}
-  Анфиса для друзей. {{ ice_cream.title|lower }}
+  Анфиса для друзей. {{ ice_cream.title|slice:":1"|upper }}{{ ice_cream.title|slice:"1:"|lower }}
 {% endblock %}
 {% block content %}
   <h1 class="pb-2 mb-0">{{ ice_cream.title }}</h1>  
